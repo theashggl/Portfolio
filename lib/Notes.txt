@@ -1,0 +1,2 @@
+Found the project inspiration and UI here - https://github.com/abuanwar072/Protfolio-Website-Flutter-Web
+The complete screenshot and gif of working site is stored here - D:\projects_related_virtual_props\Portfolio
