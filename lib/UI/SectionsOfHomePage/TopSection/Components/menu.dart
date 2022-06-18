@@ -14,6 +14,7 @@ class _MenuState extends State<Menu> {
   final MenuFunctionality _menuFunctionality = MenuFunctionality();
   int selectedIndex = 0;
   bool isHovering = false;
+
   @override
   Widget build(BuildContext context) {
     debugCheckHasMaterial(

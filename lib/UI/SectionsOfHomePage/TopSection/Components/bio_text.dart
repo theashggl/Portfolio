@@ -12,7 +12,8 @@ class IntroductoryText extends StatelessWidget {
         filter: ImageFilter.blur(
           sigmaY: 5,
           sigmaX: 5,
-        ), //todo remove this blurring part of code in a parent widget code ,i.e., in top_section.dart file
+        ),
+        //todo remove this blurring part of code in a parent widget code ,i.e., in top_section.dart file
         child: Container(
           padding: EdgeInsets.only(
             left: MediaQuery.of(context).size.width / 25,

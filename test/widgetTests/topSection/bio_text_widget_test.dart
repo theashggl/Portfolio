@@ -5,13 +5,15 @@ import 'package:portfolio/UI/SectionsOfHomePage/TopSection/Components/bio_text.d
 void main() {
   testWidgets('Bio text in top section widget test',
       (WidgetTester widgetTester) async {
-    await widgetTester.pumpWidget(MaterialApp(
-      home: Scaffold(
-        body: Stack(
-          children: const [IntroductoryText()],
+    await widgetTester.pumpWidget(
+      MaterialApp(
+        home: Scaffold(
+          body: Stack(
+            children: const [IntroductoryText()],
+          ),
         ),
       ),
-    ),);
+    );
     final textLine1 = find.text('Hello There!');
     final textLine2 = find.text('Aayush \nSahay');
     final textLine3 = find.text('Flutter Developer');

@@ -14,8 +14,8 @@ class PersonPic extends StatelessWidget {
           maxWidth: MediaQuery.of(context).size.width / 1.75,
         ),
         child: Image.asset(
-            'assets/person.png',
-            key: const Key('PersonPictureKey'),
+          'assets/person.png',
+          key: const Key('PersonPictureKey'),
         ),
       ),
     );
