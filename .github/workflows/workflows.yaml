@@ -17,44 +17,44 @@ jobs:
 
       # Setup Java environment in order to build the Android app.
       - name: checkout of repo
-      - uses: actions/checkout@v3 #Predefined action on the marketplace to use checkout a repository in the github action
+        uses: actions/checkout@v3 #Predefined action on the marketplace to use checkout a repository in the github action
 
       - name: Java setup
-      - uses: actions/setup-java@v2 #Predefined action on the marketplace to use java for the action
+        uses: actions/setup-java@v2 #Predefined action on the marketplace to use java for the action
         with:
           distribution: 'temurin'
           java-version: '17' #specifying the latest java through this command
 
       # Setup the flutter environment.
       - name: Flutter setup
-      - uses: subosito/flutter-action@v2
+        uses: subosito/flutter-action@v2
         with:
           channel: 'beta' # 'dev', 'alpha', default to: 'stable'
           flutter-version: '2.5.x' # you can also specify exact version of flutter
 
       # Get flutter dependencies.
       - name: Running flutter pub get
-      - run: flutter pub get
+        run: flutter pub get
 
       # Check for any formatting issues in the code.
       - name: Formatting of code
-      - run: flutter format . --set-exit-if-changed
+        run: flutter format . --set-exit-if-changed
 
       # Statically analyze the Dart code for any errors.
       - name: Analyzation of code
-      - run: flutter analyze
+        run: flutter analyze
 
       # Run widget tests for our flutter project.
       - name: Testing of app
-      - run: flutter test
+        run: flutter test
 
       # Build apk.
       - name: Android APK build
-      - run: flutter build apk
+        run: flutter build apk
 
       # Upload generated apk to the artifacts.
       - name: Upload artifacts
-      - uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v1
         with:
           name: release-apk
           path: build/app/outputs/apk/release/app-release.apk
