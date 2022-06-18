@@ -1,6 +1,6 @@
 import 'dart:core';
 import 'package:flutter/material.dart';
-import 'package:portfolio/Data/Menu_functionality.dart';
+import 'package:portfolio/Data/menu_functionality.dart';
 
 @visibleForTesting
 class Menu extends StatefulWidget {

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/UI/SectionsOfHomePage/TopSection/Components/Menu.dart';
 import 'package:portfolio/UI/SectionsOfHomePage/TopSection/Components/bio_text.dart';
+import 'package:portfolio/UI/SectionsOfHomePage/TopSection/Components/menu.dart';
 import 'package:portfolio/UI/SectionsOfHomePage/TopSection/Components/person_pic.dart';
 
 class TopSection extends StatefulWidget {
