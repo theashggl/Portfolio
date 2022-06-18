@@ -9,7 +9,7 @@ dependencies:
   cupertino_icons: ^1.0.5
   flutter:
     sdk: flutter
-  lint: ^1.8.2
+  lint:
 
 dev_dependencies:
   flutter_test:
