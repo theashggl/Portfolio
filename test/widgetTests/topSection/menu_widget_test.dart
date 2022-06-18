@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:portfolio/UI/SectionsOfHomePage/TopSection/Components/Menu.dart';
+import 'package:portfolio/UI/SectionsOfHomePage/TopSection/Components/menu.dart';
 
 void main() {
   testWidgets('Top section widget testing', (WidgetTester widgetTester) async {

@@ -1,2 +1,4 @@
 Found the project inspiration and UI here - https://github.com/abuanwar072/Protfolio-Website-Flutter-Web
 The complete screenshot and gif of working site is stored here - D:\projects_related_virtual_props\Portfolio
+
+//ToDo Linter needs to be modified to give a error when the imported files in a file is not exactly named as the actual file name. In android studio and this OS, we won't get a problem but in UBUNTU which is the OS in github actions, the files won't be found as the OS is case sensitive.
