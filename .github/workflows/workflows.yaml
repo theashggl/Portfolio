@@ -53,7 +53,7 @@ jobs:
       - run: flutter build apk
 
       # Upload generated apk to the artifacts.
-      - if: always()
+      - name: Upload artifacts
       - uses: actions/upload-artifact@v1
         with:
           name: release-apk
