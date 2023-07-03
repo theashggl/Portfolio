@@ -22,56 +22,67 @@ class _MenuState extends State<Menu> {
     ); //check because inkwell requires material ancestor to work
     return Positioned(
       bottom: 0,
-      child: Container(
-        constraints: BoxConstraints(
-          minHeight: MediaQuery.of(context).size.height / 10,
-          minWidth: MediaQuery.of(context).size.width / 2,
-        ),
-        decoration: const BoxDecoration(
-          borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(5),
-            topRight: Radius.circular(5),
-          ),
-          color: Colors.white,
-        ),
-        child: Row(
-          key: const Key('MenuRowKey'),
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: List<Widget>.generate(
-            _menuFunctionality.menuItems.length,
-            (index) => Material(
-              color: Colors.white.withOpacity(0.0),
-              child: InkWell(
-                onTap: () {},
-                onHover: (hovering) {
-                  setState(() {
-                    isHovering = hovering;
-                    selectedIndex = index;
-                  });
-                },
-                child: Stack(
-                  clipBehavior: Clip.none,
-                  alignment: Alignment.center,
-                  children: [
-                    Text(_menuFunctionality.menuItems[index]),
-                    Positioned(
-                      bottom: -19,
-                      child: Opacity(
-                        opacity:
-                            isHovering ? (index == selectedIndex ? 1 : 0) : 0,
-                        child: Image.asset(
-                          'assets/HoverOnMenu.png',
-                          scale: 2,
-                        ),
-                      ),
-                    ),
-                  ],
+      child: Column(
+        children: [
+          Container(
+            constraints: BoxConstraints(
+              minHeight: MediaQuery.of(context).size.height / 10,
+              minWidth: MediaQuery.of(context).size.width / 2,
+            ),
+            decoration: BoxDecoration(
+              boxShadow: [
+                BoxShadow(
+                  offset: const Offset(0, 50),
+                  blurRadius: 40,
+                  color: const Color(0xFF0700B1).withOpacity(0.3),
                 ),
+              ],
+              borderRadius: const BorderRadius.only(
+                topLeft: Radius.circular(5),
+                topRight: Radius.circular(5),
+              ),
+              color: Colors.white,
+            ),
+            child: Row(
+              key: const Key('MenuRowKey'),
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: List<Widget>.generate(
+                _menuFunctionality.menuItems.length,
+                (index) => Material(
+                  color: Colors.white.withOpacity(0.0),
+                  child: InkWell(
+                    onTap: () {},
+                    onHover: (hovering) {
+                      setState(() {
+                        isHovering = hovering;
+                        selectedIndex = index;
+                      });
+                    },
+                    child: Stack(
+                      clipBehavior: Clip.none,
+                      alignment: Alignment.center,
+                      children: [
+                        Text(_menuFunctionality.menuItems[index]),
+                        Positioned(
+                          bottom: -19,
+                          child: Opacity(
+                            opacity:
+                                isHovering ? (index == selectedIndex ? 1 : 0) : 0,
+                            child: Image.asset(
+                              'assets/HoverOnMenu.png',
+                              scale: 2,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                growable: false,
               ),
             ),
-            growable: false,
           ),
-        ),
+        ],
       ),
     );
   }

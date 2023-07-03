@@ -23,11 +23,11 @@ class _TopSectionState extends State<TopSection> {
           image: AssetImage('assets/top_section_background.png'),
         ),
       ),
-      child: Stack(
-        key: const Key('TopSectionKey'),
+      child: const Stack(
+        key: Key('TopSectionKey'),
         alignment: Alignment.center,
         clipBehavior: Clip.none,
-        children: const [
+        children: [
           IntroductoryText(),
           PersonPic(),
           Menu(),

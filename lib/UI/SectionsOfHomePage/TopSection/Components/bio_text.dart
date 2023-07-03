@@ -20,19 +20,28 @@ class IntroductoryText extends StatelessWidget {
           ),
           width: MediaQuery.of(context).size.width / 2,
           height: MediaQuery.of(context).size.height / 2.5,
-          child: Column(
+          child: const Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.center,
-            children: const [
-              Text('Hello There!'),
+            children: [
+              Text(
+                'Hello There!',
+                style: TextStyle(color: Colors.white),
+              ),
               Text(
                 'Aayush \nSahay',
                 style: TextStyle(
+                  color: Colors.white,
                   fontSize: 40,
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              Text('Flutter Developer'),
+              Text(
+                'Flutter Developer',
+                style: TextStyle(
+                  color: Colors.white,
+                ),
+              ),
             ],
           ),
         ),

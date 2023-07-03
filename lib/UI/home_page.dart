@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/Model/AboutSection/download_functionality.dart';
+import 'package:portfolio/UI/SectionsOfHomePage/AboutSection/about_section.dart';
 import 'package:portfolio/UI/SectionsOfHomePage/TopSection/top_section.dart';
 
 class MyApp extends StatelessWidget {
@@ -26,6 +28,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  final DownloadButtonWeb downloadButtonWeb = DownloadButtonWeb();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,6 +38,8 @@ class _MyHomePageState extends State<MyHomePage> {
           SliverList(
             delegate: SliverChildListDelegate([
               const TopSection(),
+              const SizedBox(height: 100,),
+              AboutSection(),
             ]),
           )
         ],
