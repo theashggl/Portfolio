@@ -1,7 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:open_file/open_file.dart';
 import 'package:path_provider/path_provider.dart';
-import 'package:permission_handler/permission_handler.dart';
 import 'package:universal_html/html.dart' as html;
 
 abstract class DownloadService {
@@ -18,21 +16,18 @@ class WebDownloadService extends DownloadService {
 class MobileDownloadService extends DownloadService {
   @override
   Future<void> download({required String url}) async {
-    final bool hasPermission = await _requestWritePermission();
-    if (!hasPermission) return;
-    print(hasPermission);
+    // final bool hasPermission = await _requestWritePermission();
+    // if (!hasPermission) return;
+    // print(hasPermission);
     final Dio dio = Dio();
-    final appDocDirectory = await getApplicationDocumentsDirectory();
-    print('hello $appDocDirectory');
       await dio.download(
-        'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf',
-        '${appDocDirectory.path}/resume',
+        'assets/downloads/resume.pdf',
+        (await getTemporaryDirectory()).path,
       );
-      OpenFile.open('${appDocDirectory.path}/resume', type: 'application/pdf');
   }
 
-  Future<bool> _requestWritePermission() async {
-    await Permission.storage.request();
-    return Permission.storage.request().isGranted;
-  }
+  // Future<bool> _requestWritePermission() async {
+  //   await Permission.storage.request();
+  //   return Permission.storage.request().isGranted;
+  // }
 }

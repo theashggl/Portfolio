@@ -9,9 +9,12 @@ class AboutSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: MediaQuery.of(context).size.width / 5,
+    //todo adjust the width of the container to be same as that of menu. Same way as the picture
+    return Container(
+      constraints: BoxConstraints.expand(
+        // width: MediaQuery.of(context).size.width/7652,
       height: MediaQuery.of(context).size.height,
+      ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
