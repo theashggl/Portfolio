@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class AboutSectionText extends StatelessWidget {
   const AboutSectionText({
     Key? key,
@@ -16,7 +15,10 @@ class AboutSectionText extends StatelessWidget {
       child: Text(
         text,
         style: const TextStyle(
-            fontWeight: FontWeight.w200, color: Color(0xFF707070), height: 2),
+          fontWeight: FontWeight.w200,
+          color: Color(0xFF707070),
+          height: 2,
+        ),
       ),
     );
   }
