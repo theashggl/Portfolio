@@ -6,10 +6,10 @@ void main() {
   testWidgets('Bio text in top section widget test',
       (WidgetTester widgetTester) async {
     await widgetTester.pumpWidget(
-      MaterialApp(
+      const MaterialApp(
         home: Scaffold(
           body: Stack(
-            children: const [IntroductoryText()],
+            children: [IntroductoryText()],
           ),
         ),
       ),
