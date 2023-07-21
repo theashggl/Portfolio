@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/Model/AboutSection/download_functionality.dart';
 import 'package:portfolio/UI/SectionsOfHomePage/AboutSection/about_section.dart';
+import 'package:portfolio/UI/SectionsOfHomePage/FeedbackRecieved/feedback_recieved.dart';
 import 'package:portfolio/UI/SectionsOfHomePage/RecentWorks/recent_Works.dart';
 import 'package:portfolio/UI/SectionsOfHomePage/TopSection/top_section.dart';
 import 'package:portfolio/UI/SectionsOfHomePage/ServiceSection/serviceSection.dart';
@@ -43,6 +44,7 @@ class _MyHomePageState extends State<MyHomePage> {
               AboutSection(),
               const ServiceOffering(),
               const RecentWorks(),
+              const FeedbackRecieved(),
             ]),
           )
         ],
