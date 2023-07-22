@@ -41,7 +41,7 @@ class _FeedbackRecievedState extends State<FeedbackRecieved> {
                           left: MediaQuery.sizeOf(context).width / 20,
                         ),
                         child: Text(
-                          'My Strong Arenas',
+                          "Client's testimonials that inspired me a lot",
                           style: TextStyle(
                             fontSize: MediaQuery.sizeOf(context).width / 60,
                           ),
@@ -61,7 +61,7 @@ class _FeedbackRecievedState extends State<FeedbackRecieved> {
                           left: MediaQuery.sizeOf(context).width / 20,
                         ),
                         child: Text(
-                          'Recent Works',
+                          'Feedback Received',
                           style: TextStyle(
                             fontWeight: FontWeight.w900,
                             fontSize: MediaQuery.sizeOf(context).width / 20,

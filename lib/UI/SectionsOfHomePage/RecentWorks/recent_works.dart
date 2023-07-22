@@ -75,7 +75,8 @@ class _RecentWorksState extends State<RecentWorks> {
                                   ),
                                 ),
                                 const Text(
-                                    'Get an estimate for the new project'),
+                                  'Get an estimate for the new project',
+                                ),
                               ],
                             ),
                           ),
@@ -188,7 +189,8 @@ class _RecentWorksState extends State<RecentWorks> {
                                       Card(
                                         margin: EdgeInsets.zero,
                                         shape: RoundedRectangleBorder(
-                                          borderRadius: BorderRadius.circular(10),
+                                          borderRadius:
+                                              BorderRadius.circular(10),
                                         ),
                                         elevation: 0,
                                         child: const Image(
@@ -197,7 +199,8 @@ class _RecentWorksState extends State<RecentWorks> {
                                       ),
                                       SizedBox(
                                         width:
-                                            MediaQuery.sizeOf(context).width / 19,
+                                            MediaQuery.sizeOf(context).width /
+                                                19,
                                       ),
                                       const Column(
                                         crossAxisAlignment:
@@ -205,7 +208,9 @@ class _RecentWorksState extends State<RecentWorks> {
                                         mainAxisAlignment:
                                             MainAxisAlignment.spaceEvenly,
                                         children: [
-                                          Expanded(child: Text('GRAPHIC DESIGN')),
+                                          Expanded(
+                                            child: Text('GRAPHIC DESIGN'),
+                                          ),
                                           Expanded(
                                             child: Center(
                                               child: Text(
@@ -242,7 +247,8 @@ class _RecentWorksState extends State<RecentWorks> {
                                       Card(
                                         margin: EdgeInsets.zero,
                                         shape: RoundedRectangleBorder(
-                                          borderRadius: BorderRadius.circular(10),
+                                          borderRadius:
+                                              BorderRadius.circular(10),
                                         ),
                                         elevation: 0,
                                         child: const Image(
@@ -251,7 +257,8 @@ class _RecentWorksState extends State<RecentWorks> {
                                       ),
                                       SizedBox(
                                         width:
-                                            MediaQuery.sizeOf(context).width / 19,
+                                            MediaQuery.sizeOf(context).width /
+                                                19,
                                       ),
                                       const Column(
                                         crossAxisAlignment:
@@ -259,7 +266,9 @@ class _RecentWorksState extends State<RecentWorks> {
                                         mainAxisAlignment:
                                             MainAxisAlignment.spaceEvenly,
                                         children: [
-                                          Expanded(child: Text('GRAPHIC DESIGN')),
+                                          Expanded(
+                                            child: Text('GRAPHIC DESIGN'),
+                                          ),
                                           Expanded(
                                             child: Center(
                                               child: Text(
@@ -302,7 +311,8 @@ class _RecentWorksState extends State<RecentWorks> {
                                       Card(
                                         margin: EdgeInsets.zero,
                                         shape: RoundedRectangleBorder(
-                                          borderRadius: BorderRadius.circular(10),
+                                          borderRadius:
+                                              BorderRadius.circular(10),
                                         ),
                                         elevation: 0,
                                         child: const Image(
@@ -311,7 +321,8 @@ class _RecentWorksState extends State<RecentWorks> {
                                       ),
                                       SizedBox(
                                         width:
-                                            MediaQuery.sizeOf(context).width / 19,
+                                            MediaQuery.sizeOf(context).width /
+                                                19,
                                       ),
                                       const Column(
                                         crossAxisAlignment:
@@ -319,7 +330,9 @@ class _RecentWorksState extends State<RecentWorks> {
                                         mainAxisAlignment:
                                             MainAxisAlignment.spaceEvenly,
                                         children: [
-                                          Expanded(child: Text('GRAPHIC DESIGN')),
+                                          Expanded(
+                                            child: Text('GRAPHIC DESIGN'),
+                                          ),
                                           Expanded(
                                             child: Center(
                                               child: Text(
@@ -356,7 +369,8 @@ class _RecentWorksState extends State<RecentWorks> {
                                       Card(
                                         margin: EdgeInsets.zero,
                                         shape: RoundedRectangleBorder(
-                                          borderRadius: BorderRadius.circular(10),
+                                          borderRadius:
+                                              BorderRadius.circular(10),
                                         ),
                                         elevation: 0,
                                         child: const Image(
@@ -365,7 +379,8 @@ class _RecentWorksState extends State<RecentWorks> {
                                       ),
                                       SizedBox(
                                         width:
-                                            MediaQuery.sizeOf(context).width / 19,
+                                            MediaQuery.sizeOf(context).width /
+                                                19,
                                       ),
                                       const Column(
                                         crossAxisAlignment:
@@ -373,7 +388,9 @@ class _RecentWorksState extends State<RecentWorks> {
                                         mainAxisAlignment:
                                             MainAxisAlignment.spaceEvenly,
                                         children: [
-                                          Expanded(child: Text('GRAPHIC DESIGN')),
+                                          Expanded(
+                                            child: Text('GRAPHIC DESIGN'),
+                                          ),
                                           Expanded(
                                             child: Center(
                                               child: Text(
