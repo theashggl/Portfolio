@@ -196,9 +196,22 @@ class _ContactMeState extends State<ContactMe> {
                         ],
                       ),
                     ),
-                    // Wrap(
-                    //   children: [],
-                    // ),
+                    Wrap(
+                      children: [
+                        SizedBox(
+                          width: MediaQuery.sizeOf(context).width/2,
+                          child: TextField(
+                            decoration: InputDecoration(
+                              hintText: 'Your Name',
+                              border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(50),
+                              ),
+                              labelText: 'Enter your name',
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
                   ],
                 ),
               )
