@@ -107,19 +107,19 @@ class _ContactMeState extends State<ContactMe> {
                                     ClipRRect(
                                       borderRadius: BorderRadius.circular(10),
                                       child: const Image(
-                                        image:
-                                            AssetImage('assets/people.png'),
+                                        image: AssetImage('assets/people.png'),
                                       ),
                                     ),
                                     SizedBox(
-                                      width: MediaQuery.sizeOf(context).width/25,
+                                      width:
+                                          MediaQuery.sizeOf(context).width / 25,
                                     ),
                                     const Text(
                                       'Whatsapp',
                                       style: TextStyle(
-                                          fontWeight: FontWeight.bold),
+                                        fontWeight: FontWeight.bold,
+                                      ),
                                     ),
-
                                   ],
                                 ),
                               ),
@@ -141,19 +141,19 @@ class _ContactMeState extends State<ContactMe> {
                                     ClipRRect(
                                       borderRadius: BorderRadius.circular(10),
                                       child: const Image(
-                                        image:
-                                            AssetImage('assets/people.png'),
+                                        image: AssetImage('assets/people.png'),
                                       ),
                                     ),
                                     SizedBox(
-                                      width: MediaQuery.sizeOf(context).width/25,
+                                      width:
+                                          MediaQuery.sizeOf(context).width / 25,
                                     ),
                                     const Text(
                                       'Twitter',
                                       style: TextStyle(
-                                          fontWeight: FontWeight.bold),
+                                        fontWeight: FontWeight.bold,
+                                      ),
                                     ),
-
                                   ],
                                 ),
                               ),
@@ -175,19 +175,19 @@ class _ContactMeState extends State<ContactMe> {
                                     ClipRRect(
                                       borderRadius: BorderRadius.circular(10),
                                       child: const Image(
-                                        image:
-                                            AssetImage('assets/people.png'),
+                                        image: AssetImage('assets/people.png'),
                                       ),
                                     ),
                                     SizedBox(
-                                      width: MediaQuery.sizeOf(context).width/25,
+                                      width:
+                                          MediaQuery.sizeOf(context).width / 25,
                                     ),
                                     const Text(
                                       'Linkedin',
                                       style: TextStyle(
-                                          fontWeight: FontWeight.bold),
+                                        fontWeight: FontWeight.bold,
+                                      ),
                                     ),
-
                                   ],
                                 ),
                               ),
@@ -199,7 +199,7 @@ class _ContactMeState extends State<ContactMe> {
                     Wrap(
                       children: [
                         SizedBox(
-                          width: MediaQuery.sizeOf(context).width/2,
+                          width: MediaQuery.sizeOf(context).width / 2,
                           child: TextField(
                             decoration: InputDecoration(
                               hintText: 'Your Name',

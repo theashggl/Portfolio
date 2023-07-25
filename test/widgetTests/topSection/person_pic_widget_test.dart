@@ -5,9 +5,9 @@ import 'package:portfolio/UI/SectionsOfHomePage/TopSection/Components/person_pic
 void main() {
   testWidgets('Person Pic widget test', (WidgetTester widgetTester) async {
     await widgetTester.pumpWidget(
-      MaterialApp(
+      const MaterialApp(
         home: Scaffold(
-          body: Stack(children: const [PersonPic()]),
+          body: Stack(children: [PersonPic()]),
         ),
       ),
     );

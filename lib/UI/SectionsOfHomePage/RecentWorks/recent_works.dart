@@ -169,7 +169,9 @@ class _RecentWorksState extends State<RecentWorks> {
                   Wrap(
                     //todo create a list.generate list to create the lists.
                     children: [
-                      SizedBox(width:MediaQuery.sizeOf(context).width/19,),
+                      SizedBox(
+                        width: MediaQuery.sizeOf(context).width / 19,
+                      ),
                       FractionallySizedBox(
                         widthFactor: 0.5,
                         child: Card(
@@ -186,8 +188,7 @@ class _RecentWorksState extends State<RecentWorks> {
                                 Card(
                                   margin: EdgeInsets.zero,
                                   shape: RoundedRectangleBorder(
-                                    borderRadius:
-                                        BorderRadius.circular(10),
+                                    borderRadius: BorderRadius.circular(10),
                                   ),
                                   elevation: 0,
                                   child: const Image(
@@ -195,68 +196,7 @@ class _RecentWorksState extends State<RecentWorks> {
                                   ),
                                 ),
                                 SizedBox(
-                                  width:
-                                      MediaQuery.sizeOf(context).width /
-                                          19,
-                                ),
-                                const Expanded(
-                                  child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceEvenly,
-                                    children: [
-                                      Expanded(
-                                        child: Text('GRAPHIC DESIGN'),
-                                      ),
-                                      Expanded(
-                                        child: Center(
-                                          child: Text(
-                                            'New  Fresh Looking Portfolio indeed at the end',
-                                            softWrap: true,
-                                            maxLines: 2,
-                                            overflow:
-                                                TextOverflow.ellipsis,
-                                          ),
-                                        ),
-                                      ),
-                                      Text('View Details'),
-                                    ],
-                                  ),
-                                )
-                              ],
-                            ),
-                          ),
-                        ),
-                      ),
-                      FractionallySizedBox(
-                        widthFactor: 0.3,
-                        child: Card(
-                          semanticContainer: false,
-                          elevation: 0,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                          child: SizedBox(
-                            height: 160,
-                            width: 100,
-                            child: Row(
-                              children: [
-                                Card(
-                                  margin: EdgeInsets.zero,
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius:
-                                        BorderRadius.circular(10),
-                                  ),
-                                  elevation: 0,
-                                  child: const Image(
-                                    image: AssetImage('assets/work1.png'),
-                                  ),
-                                ),
-                                SizedBox(
-                                  width:
-                                      MediaQuery.sizeOf(context).width /
-                                          19,
+                                  width: MediaQuery.sizeOf(context).width / 19,
                                 ),
                                 const Expanded(
                                   child: Column(
@@ -303,8 +243,7 @@ class _RecentWorksState extends State<RecentWorks> {
                                 Card(
                                   margin: EdgeInsets.zero,
                                   shape: RoundedRectangleBorder(
-                                    borderRadius:
-                                        BorderRadius.circular(10),
+                                    borderRadius: BorderRadius.circular(10),
                                   ),
                                   elevation: 0,
                                   child: const Image(
@@ -312,9 +251,7 @@ class _RecentWorksState extends State<RecentWorks> {
                                   ),
                                 ),
                                 SizedBox(
-                                  width:
-                                      MediaQuery.sizeOf(context).width /
-                                          19,
+                                  width: MediaQuery.sizeOf(context).width / 19,
                                 ),
                                 const Expanded(
                                   child: Column(
@@ -361,8 +298,7 @@ class _RecentWorksState extends State<RecentWorks> {
                                 Card(
                                   margin: EdgeInsets.zero,
                                   shape: RoundedRectangleBorder(
-                                    borderRadius:
-                                        BorderRadius.circular(10),
+                                    borderRadius: BorderRadius.circular(10),
                                   ),
                                   elevation: 0,
                                   child: const Image(
@@ -370,9 +306,62 @@ class _RecentWorksState extends State<RecentWorks> {
                                   ),
                                 ),
                                 SizedBox(
-                                  width:
-                                      MediaQuery.sizeOf(context).width /
-                                          19,
+                                  width: MediaQuery.sizeOf(context).width / 19,
+                                ),
+                                const Expanded(
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceEvenly,
+                                    children: [
+                                      Expanded(
+                                        child: Text('GRAPHIC DESIGN'),
+                                      ),
+                                      Expanded(
+                                        child: Center(
+                                          child: Text(
+                                            'New  Fresh Looking Portfolio indeed at the end',
+                                            softWrap: true,
+                                            maxLines: 2,
+                                            overflow: TextOverflow.ellipsis,
+                                          ),
+                                        ),
+                                      ),
+                                      Text('View Details'),
+                                    ],
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                      FractionallySizedBox(
+                        widthFactor: 0.3,
+                        child: Card(
+                          semanticContainer: false,
+                          elevation: 0,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: SizedBox(
+                            height: 160,
+                            width: 100,
+                            child: Row(
+                              children: [
+                                Card(
+                                  margin: EdgeInsets.zero,
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(10),
+                                  ),
+                                  elevation: 0,
+                                  child: const Image(
+                                    image: AssetImage('assets/work1.png'),
+                                  ),
+                                ),
+                                SizedBox(
+                                  width: MediaQuery.sizeOf(context).width / 19,
                                 ),
                                 const Expanded(
                                   child: Column(

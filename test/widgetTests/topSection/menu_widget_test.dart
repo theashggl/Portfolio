@@ -5,11 +5,11 @@ import 'package:portfolio/UI/SectionsOfHomePage/TopSection/Components/menu.dart'
 void main() {
   testWidgets('Top section widget testing', (WidgetTester widgetTester) async {
     await widgetTester.pumpWidget(
-      MaterialApp(
+      const MaterialApp(
         home: Scaffold(
           body: Stack(
             //not sure why stack needs to added specifically. Others depend on material so added that
-            children: const [
+            children: [
               Menu(),
             ],
           ),

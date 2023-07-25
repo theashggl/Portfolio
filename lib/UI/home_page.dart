@@ -4,8 +4,9 @@ import 'package:portfolio/UI/SectionsOfHomePage/AboutSection/about_section.dart'
 import 'package:portfolio/UI/SectionsOfHomePage/ContactMe/contact_me.dart';
 import 'package:portfolio/UI/SectionsOfHomePage/FeedbackRecieved/feedback_recieved.dart';
 import 'package:portfolio/UI/SectionsOfHomePage/RecentWorks/recent_Works.dart';
+import 'package:portfolio/UI/SectionsOfHomePage/ServiceSection/service_section.dart';
 import 'package:portfolio/UI/SectionsOfHomePage/TopSection/top_section.dart';
-import 'package:portfolio/UI/SectionsOfHomePage/ServiceSection/serviceSection.dart';
+
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
@@ -32,6 +33,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   final DownloadButtonWeb downloadButtonWeb = DownloadButtonWeb();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,11 +43,13 @@ class _MyHomePageState extends State<MyHomePage> {
           SliverList(
             delegate: SliverChildListDelegate([
               const TopSection(),
-              const SizedBox(height: 100,),
+              const SizedBox(
+                height: 100,
+              ),
               AboutSection(),
               const ServiceOffering(),
               const RecentWorks(),
-              const FeedbackRecieved(),
+              const FeedbackReceived(),
               const ContactMe(),
             ]),
           )

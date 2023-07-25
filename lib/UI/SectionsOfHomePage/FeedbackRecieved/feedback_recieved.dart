@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class FeedbackRecieved extends StatefulWidget {
-  const FeedbackRecieved({Key? key}) : super(key: key);
+class FeedbackReceived extends StatefulWidget {
+  const FeedbackReceived({Key? key}) : super(key: key);
 
   @override
-  State<FeedbackRecieved> createState() => _FeedbackRecievedState();
+  State<FeedbackReceived> createState() => _FeedbackReceivedState();
 }
 
-class _FeedbackRecievedState extends State<FeedbackRecieved> {
+class _FeedbackReceivedState extends State<FeedbackReceived> {
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -78,7 +78,8 @@ class _FeedbackRecievedState extends State<FeedbackRecieved> {
             ), //todo remove this sizedbox and replace the code to do its job.
             Wrap(
               alignment: WrapAlignment.spaceEvenly,
-              children: [//todo convert children to auto generated list of them
+              children: [
+                //todo convert children to auto generated list of them
                 SizedBox(
                   width: MediaQuery.sizeOf(context).width / 4,
                   child: Card(
@@ -121,7 +122,11 @@ class _FeedbackRecievedState extends State<FeedbackRecieved> {
                         ),
                         const Padding(
                           padding: EdgeInsets.only(
-                              left: 40.0, right: 40.0, bottom: 20.0, top: 40),
+                            left: 40.0,
+                            right: 40.0,
+                            bottom: 20.0,
+                            top: 40,
+                          ),
                           child: Text(
                             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
                             // softWrap: true,
@@ -183,7 +188,11 @@ class _FeedbackRecievedState extends State<FeedbackRecieved> {
                         ),
                         const Padding(
                           padding: EdgeInsets.only(
-                              left: 40.0, right: 40.0, bottom: 20.0, top: 40),
+                            left: 40.0,
+                            right: 40.0,
+                            bottom: 20.0,
+                            top: 40,
+                          ),
                           child: Text(
                             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
                             // softWrap: true,
@@ -245,7 +254,11 @@ class _FeedbackRecievedState extends State<FeedbackRecieved> {
                         ),
                         const Padding(
                           padding: EdgeInsets.only(
-                              left: 40.0, right: 40.0, bottom: 20.0, top: 40),
+                            left: 40.0,
+                            right: 40.0,
+                            bottom: 20.0,
+                            top: 40,
+                          ),
                           child: Text(
                             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
                             // softWrap: true,
