@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/Data/service_section_card_data.dart';
+import 'package:portfolio/UI/SectionsOfHomePage/ServiceSection/CardOfServiceSection/card_of_service_section.dart';
 
 class ServiceOffering extends StatefulWidget {
   const ServiceOffering({Key? key}) : super(key: key);
@@ -8,6 +10,9 @@ class ServiceOffering extends StatefulWidget {
 }
 
 class _ServiceOfferingState extends State<ServiceOffering> {
+  final ServiceSectionCardData _serviceSectionCardData =
+      ServiceSectionCardData();
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -68,107 +73,18 @@ class _ServiceOfferingState extends State<ServiceOffering> {
               ),
             ],
           ),
-          Row(
-            //todo change the contents of this row into a list item builder instead of hard coding it
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              SizedBox(
-                width: MediaQuery.of(context).size.width / 7,
-                child: AspectRatio(
-                  aspectRatio: 1,
-                  child: Card(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    elevation: 0,
-                    color: const Color(0xFFD9FFFC),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        CircleAvatar(
-                          backgroundColor: Colors.white,
-                          radius: MediaQuery.of(context).size.width / 26,
-                          child: Image.asset('assets/graphic.png'),
-                        ),
-                        const Text('Graphic Design'),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-              SizedBox(
-                width: MediaQuery.of(context).size.width / 7,
-                child: AspectRatio(
-                  aspectRatio: 1,
-                  child: Card(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    elevation: 0,
-                    color: const Color(0xFFE4FFC7),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        CircleAvatar(
-                          backgroundColor: Colors.white,
-                          radius: MediaQuery.of(context).size.width / 26,
-                          child: Image.asset('assets/web_design_logo.png'),
-                        ),
-                        const Text('Web Design'),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-              SizedBox(
-                width: MediaQuery.of(context).size.width / 7,
-                child: AspectRatio(
-                  aspectRatio: 1,
-                  child: Card(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    elevation: 0,
-                    color: const Color(0xFFFFF3DD),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        CircleAvatar(
-                          backgroundColor: Colors.white,
-                          radius: MediaQuery.of(context).size.width / 26,
-                          child: Image.asset('assets/ui_design.png'),
-                        ),
-                        const Text('UI Design'),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-              SizedBox(
-                width: MediaQuery.of(context).size.width / 7,
-                child: AspectRatio(
-                  aspectRatio: 1,
-                  child: Card(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    elevation: 0,
-                    color: const Color(0xFFFFE0E0),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        CircleAvatar(
-                          backgroundColor: Colors.white,
-                          radius: MediaQuery.of(context).size.width / 26,
-                          child: Image.asset('assets/interaction_design.png'),
-                        ),
-                        const Text('Interaction Design'),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-            ],
+          SizedBox(
+            height: 200,
+            child: ListView.builder(
+              scrollDirection: Axis.horizontal,
+              shrinkWrap: true,
+              itemCount: _serviceSectionCardData.colorsOfCard.length,
+              itemBuilder: (context, index) {
+                return CardsOfServiceSection(
+                  indexforLoop: index,
+                );
+              },
+            ),
           )
         ],
       ),
