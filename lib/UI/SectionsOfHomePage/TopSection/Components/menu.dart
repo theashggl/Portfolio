@@ -27,7 +27,7 @@ class _MenuState extends State<Menu> {
           Container(
             constraints: BoxConstraints(
               minHeight: MediaQuery.of(context).size.height / 10,
-              minWidth: MediaQuery.of(context).size.width / 2,
+              minWidth: MediaQuery.of(context).size.width / 1.7,
             ),
             decoration: BoxDecoration(
               boxShadow: [
@@ -66,8 +66,9 @@ class _MenuState extends State<Menu> {
                         Positioned(
                           bottom: -19,
                           child: Opacity(
-                            opacity:
-                                isHovering ? (index == selectedIndex ? 1 : 0) : 0,
+                            opacity: isHovering
+                                ? (index == selectedIndex ? 1 : 0)
+                                : 0,
                             child: Image.asset(
                               'assets/HoverOnMenu.png',
                               scale: 2,

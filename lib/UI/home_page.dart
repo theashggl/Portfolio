@@ -46,11 +46,16 @@ class _MyHomePageState extends State<MyHomePage> {
               const SizedBox(
                 height: 100,
               ),
-              AboutSection(),
-              const ServiceOffering(),
-              const RecentWorks(),
-              const FeedbackReceived(),
-              const ContactMe(),
+              Column(
+                children: [
+                  AboutSection(),
+                  const SizedBox(height: 100,),
+                  const ServiceOffering(),
+                  const RecentWorks(),
+                  const FeedbackReceived(),
+                  const ContactMe(),
+                ],
+              ),
             ]),
           )
         ],
