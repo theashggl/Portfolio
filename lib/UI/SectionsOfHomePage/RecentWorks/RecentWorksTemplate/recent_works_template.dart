@@ -14,6 +14,7 @@ class RecentWorksTemplate extends StatefulWidget {
 
 class _RecentWorksTemplateState extends State<RecentWorksTemplate> {
   final RecentWorkData _recentWorkData = RecentWorkData();
+
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -37,7 +38,8 @@ class _RecentWorksTemplateState extends State<RecentWorksTemplate> {
                 ),
                 elevation: 0,
                 child: Image(
-                  image: AssetImage(_recentWorkData.imageOfAsset[widget.currentIndex]),
+                  image: AssetImage(
+                      _recentWorkData.imageOfAsset[widget.currentIndex]),
                 ),
               ),
               const SizedBox(
@@ -48,13 +50,20 @@ class _RecentWorksTemplateState extends State<RecentWorksTemplate> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text(_recentWorkData.nameOfRecentWork[widget.currentIndex],
-                    textScaleFactor: 0.7,),
+                    Text(
+                      _recentWorkData.nameOfRecentWork[widget.currentIndex],
+                      textScaleFactor: 0.7,
+                    ),
                     Padding(
-                      padding: const EdgeInsets.only(top: 25.0,bottom: 25.0,right: 8.0,),
+                      padding: const EdgeInsets.only(
+                        top: 25.0,
+                        bottom: 25.0,
+                        right: 8.0,
+                      ),
                       child: Center(
                         child: Text(
-                          _recentWorkData.detailsOfRecentWork[widget.currentIndex],
+                          _recentWorkData
+                              .detailsOfRecentWork[widget.currentIndex],
                           softWrap: true,
                           maxLines: 3,
                           style: const TextStyle(
@@ -63,7 +72,8 @@ class _RecentWorksTemplateState extends State<RecentWorksTemplate> {
                         ),
                       ),
                     ),
-                    Text(_recentWorkData.viewDetailsButtonText,
+                    Text(
+                      _recentWorkData.viewDetailsButtonText,
                       textScaleFactor: 0.7,
                     ),
                   ],

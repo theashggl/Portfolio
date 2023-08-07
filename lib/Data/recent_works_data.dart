@@ -14,7 +14,7 @@ class RecentWorkData {
     'GRAPHIC DESIGN',
   ];
 
-  List<String> detailsOfRecentWork =[
+  List<String> detailsOfRecentWork = [
     'New & Fresh Looking Portfolio indeed \nat the end',
     'New & Fresh Looking Portfolio indeed \nat the end',
     'New & Fresh Looking Portfolio indeed \nat the end',
