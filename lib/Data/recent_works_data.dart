@@ -15,10 +15,10 @@ class RecentWorkData {
   ];
 
   List<String> detailsOfRecentWork =[
-    'New  Fresh Looking Portfolio indeed at the end',
-    'New  Fresh Looking Portfolio indeed at the end',
-    'New  Fresh Looking Portfolio indeed at the end',
-    'New  Fresh Looking Portfolio indeed at the end',
+    'New & Fresh Looking Portfolio indeed \nat the end',
+    'New & Fresh Looking Portfolio indeed \nat the end',
+    'New & Fresh Looking Portfolio indeed \nat the end',
+    'New & Fresh Looking Portfolio indeed \nat the end',
   ];
   String viewDetailsButtonText = 'View Details';
 }

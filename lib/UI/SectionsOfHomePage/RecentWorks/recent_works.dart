@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/Data/recent_works_data.dart';
 import 'package:portfolio/UI/SectionsOfHomePage/RecentWorks/RecentWorksTemplate/recent_works_template.dart';
 import 'package:portfolio/UI/SectionsOfHomePage/heading_part_of_every_section.dart';
+
 //todo implement the recent works tiles
 class RecentWorks extends StatefulWidget {
   const RecentWorks({Key? key}) : super(key: key);
@@ -17,12 +18,13 @@ class _RecentWorksState extends State<RecentWorks> {
   Widget build(BuildContext context) {
     return Container(
       width: MediaQuery.sizeOf(context).width,
+      height: MediaQuery.sizeOf(context).height * 1.3,
       decoration: BoxDecoration(
-        color:  const Color(0xFFF7E8FF).withOpacity(0.3),
+        color: const Color(0xFFF7E8FF).withOpacity(0.3),
         image: const DecorationImage(
           repeat: ImageRepeat.repeat,
           image: AssetImage('assets/services_background.png'),
-        )
+        ),
       ),
       child: Center(
         child: Container(
@@ -44,12 +46,11 @@ class _RecentWorksState extends State<RecentWorks> {
             clipBehavior: Clip.none,
             children: [
               Positioned(
-                top: -70,
+                top: -150,
                 //todo This needs to be set such that the top child is half way through the container
                 left: 0,
                 child: SizedBox(
                   width: MediaQuery.sizeOf(context).width / 1.7,
-                  height: 500,
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -59,8 +60,8 @@ class _RecentWorksState extends State<RecentWorks> {
                           borderRadius: BorderRadius.circular(100),
                           boxShadow: [
                             BoxShadow(
-                              offset: const Offset(0, 50),
-                              blurRadius: 40,
+                              offset: const Offset(0, 20),
+                              blurRadius: 20,
                               color: const Color(0xFF0700B1).withOpacity(0.3),
                             ),
                           ],
@@ -77,11 +78,14 @@ class _RecentWorksState extends State<RecentWorks> {
                               child: ListTile(
                                 leading: const Row(
                                   mainAxisSize: MainAxisSize.min,
-                                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceAround,
                                   children: [
                                     Padding(
-                                      padding:
-                                          EdgeInsets.only(left: 8.0, right: 8.0),
+                                      padding: EdgeInsets.only(
+                                        left: 8.0,
+                                        right: 8.0,
+                                      ),
                                       child: Image(
                                         image: AssetImage('assets/email.png'),
                                       ),
@@ -98,7 +102,8 @@ class _RecentWorksState extends State<RecentWorks> {
                                 title: Text(
                                   'Starting New Project?',
                                   style: TextStyle(
-                                    fontSize: MediaQuery.sizeOf(context).width / 60,
+                                    fontSize:
+                                        MediaQuery.sizeOf(context).width / 60,
                                   ),
                                 ),
                                 subtitle: const Text(
@@ -116,7 +121,8 @@ class _RecentWorksState extends State<RecentWorks> {
                                         width: 0.1,
                                       ),
                                     ),
-                                    shape: MaterialStatePropertyAll<StadiumBorder>(
+                                    shape:
+                                        MaterialStatePropertyAll<StadiumBorder>(
                                       StadiumBorder(),
                                     ),
                                   ),
@@ -262,24 +268,27 @@ class _RecentWorksState extends State<RecentWorks> {
                       const HeadingPartOfEverySection(index: 1),
                       SizedBox(
                         height: MediaQuery.sizeOf(context).height / 10,
-                      ),//look out for the line 455 for the grid view implementation instead of the wrap implementation of following child widgets
+                      ),
+                      //look out for the line 455 for the grid view implementation instead of the wrap implementation of following child widgets
                       // SizedBox(
                       //   width: MediaQuery.sizeOf(context).width / 19,
                       // ),
-                      // SizedBox(
-                      //   height: 200,
-                      //   width: MediaQuery.sizeOf(context).width,
-                      //   child: ListView.builder(
-                      //     itemCount: _recentWorkData.detailsOfRecentWork.length,
-                      //     shrinkWrap: true,
-                      //     scrollDirection: Axis.horizontal,
-                      //     itemBuilder: (context, currentIndex) {
-                      //       return RecentWorksTemplate(
-                      //         currentIndex: currentIndex,
-                      //       );
-                      //     },
-                      //   ),
-                      // ),
+                      SizedBox(
+                        height: 600,
+                        width: MediaQuery.sizeOf(context).width,
+                        child: Wrap(
+                          spacing: 20,
+                          runSpacing: 40,
+                          alignment: WrapAlignment.spaceBetween,
+                          children: List<RecentWorksTemplate>.generate(
+                              _recentWorkData.imageOfAsset.length,
+                              (currentIndex) {
+                            return RecentWorksTemplate(
+                              currentIndex: currentIndex,
+                            );
+                          }),
+                        ),
+                      ),
                       // const Wrap(
                       //   children: [
                       //     RecentWorksTemplate(currentIndex: 0),

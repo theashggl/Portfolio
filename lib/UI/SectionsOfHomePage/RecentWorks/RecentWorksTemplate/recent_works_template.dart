@@ -17,8 +17,8 @@ class _RecentWorksTemplateState extends State<RecentWorksTemplate> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 200,
-      height: 20,
+      width: 350,
+      height: 200,
       child: Card(
         semanticContainer: false,
         elevation: 0,
@@ -26,8 +26,8 @@ class _RecentWorksTemplateState extends State<RecentWorksTemplate> {
           borderRadius: BorderRadius.circular(10),
         ),
         child: SizedBox(
-          height: 20,
-          width: 100,
+          height: 200,
+          width: 200,
           child: Row(
             children: [
               Card(
@@ -46,22 +46,26 @@ class _RecentWorksTemplateState extends State<RecentWorksTemplate> {
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Expanded(
-                      child: Text(_recentWorkData.nameOfRecentWork[widget.currentIndex]),
-                    ),
-                    Expanded(
+                    Text(_recentWorkData.nameOfRecentWork[widget.currentIndex],
+                    textScaleFactor: 0.7,),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 25.0,bottom: 25.0,right: 8.0,),
                       child: Center(
                         child: Text(
                           _recentWorkData.detailsOfRecentWork[widget.currentIndex],
                           softWrap: true,
-                          maxLines: 2,
-                          overflow: TextOverflow.ellipsis,
+                          maxLines: 3,
+                          style: const TextStyle(
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
                       ),
                     ),
-                    Text(_recentWorkData.viewDetailsButtonText),
+                    Text(_recentWorkData.viewDetailsButtonText,
+                      textScaleFactor: 0.7,
+                    ),
                   ],
                 ),
               )
